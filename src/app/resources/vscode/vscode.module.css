@@ -1,0 +1,50 @@
+.page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+main#main-content {
+  background: transparent !important;
+}
+
+.header {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.description {
+  margin: 0 auto 2rem;
+  max-width: 68ch;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .header {
+    gap: 0.15rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    margin: 0 auto 1.25rem;
+    max-width: 100%;
+  }
+
+  .page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.05rem;
+  }
+}

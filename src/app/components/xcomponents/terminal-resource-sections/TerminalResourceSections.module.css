@@ -1,0 +1,688 @@
+.shell {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  width: 100%;
+  min-width: 0;
+}
+
+.controls {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+}
+
+.controlsHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.controlsTitle {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  color: var(--foreground);
+}
+
+.controlsMeta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.controlsGrid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+}
+
+.control {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.controlLabel {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.input,
+.select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+  background: color-mix(in srgb, var(--background) 88%, var(--card-bg) 12%);
+  color: var(--foreground);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--text-muted) 78%, transparent);
+}
+
+.input:focus,
+.select:focus {
+  border-color: color-mix(in srgb, var(--primary) 62%, var(--border) 38%);
+  background: color-mix(in srgb, var(--background) 84%, var(--card-bg) 16%);
+}
+
+.terminalChips {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.2rem 0.05rem;
+  min-width: 0;
+  scrollbar-width: none;
+}
+
+.terminalChips::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.84rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chip:hover,
+.chip:focus-visible {
+  outline: none;
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border) 60%);
+}
+
+.chip[data-active="true"] {
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 50%, var(--border) 50%);
+}
+
+.install,
+.themes {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.preview {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.previewControls {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  max-width: 26rem;
+}
+
+.previewSurface {
+  position: relative;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background-image: url("/images/resources/terminal/terminal-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.previewSurface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.terminalFrame {
+  --t-bg: #0b0b0b;
+  --t-fg: #ededed;
+  --t-muted: rgba(255, 255, 255, 0.65);
+  --t-soft: rgba(255, 255, 255, 0.5);
+  --t-dim: rgba(255, 255, 255, 0.4);
+  --t-c2: #34d399;
+  --t-c3: #fbbf24;
+  --t-c4: #60a5fa;
+  --t-c5: #a78bfa;
+  --t-c6: #5ad4e6;
+  display: grid;
+  position: relative;
+  min-width: 0;
+  max-width: 66rem;
+  margin: 0 auto;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  border-radius: 1.15rem;
+  background: color-mix(in srgb, var(--background) 92%, var(--card-bg) 8%);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--primary) 12%, transparent),
+    0 28px 64px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  background: color-mix(in srgb, var(--background) 86%, var(--card-bg) 14%);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 62%, transparent);
+}
+
+.trafficLights {
+  display: inline-flex;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+}
+
+.light {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--border) 75%, transparent);
+}
+
+.light[data-variant="close"] {
+  background: #ff5f56;
+}
+
+.light[data-variant="min"] {
+  background: #ffbd2e;
+}
+
+.light[data-variant="max"] {
+  background: #27c93f;
+}
+
+.terminalTitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.terminalTitleAccent {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.terminalHeaderSpacer {
+  width: 2rem;
+  flex: 0 0 auto;
+}
+
+.terminalBody {
+  padding: 0.85rem 0.95rem 0.95rem;
+  background: var(--t-bg);
+  color: var(--t-fg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.preview .terminalFrame .terminalHeader p {
+  max-width: none;
+  margin: 0;
+}
+
+.preview .terminalFrame .terminalTitle {
+  color: var(--t-soft);
+}
+
+.preview .terminalFrame .terminalBody p {
+  max-width: none;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.preview .terminalFrame .terminalBody dl,
+.preview .terminalFrame .terminalBody dt,
+.preview .terminalFrame .terminalBody dd,
+.preview .terminalFrame .terminalBody pre,
+.preview .terminalFrame .terminalBody code,
+.preview .terminalFrame .terminalBody span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.preview .terminalFrame .terminalBody .terminalNotice {
+  margin: 0 0 0.55rem;
+  color: var(--t-fg);
+  opacity: 0.82;
+}
+
+.noticeTag {
+  color: var(--t-c6);
+  font-weight: 700;
+}
+
+.noticeText {
+  color: var(--t-fg);
+}
+
+.preview .terminalFrame .terminalBody .promptLine {
+  margin: 0 0 0.9rem;
+}
+
+.promptUser {
+  color: var(--t-c2);
+  font-weight: 700;
+}
+
+.promptAt {
+  color: var(--t-fg);
+}
+
+.promptHost {
+  color: var(--t-c5);
+  font-weight: 700;
+}
+
+.promptPath {
+  color: var(--t-soft);
+}
+
+.promptSigil {
+  color: var(--t-c3);
+}
+
+.promptCommand {
+  color: var(--t-c4);
+  font-weight: 700;
+}
+
+.fetchGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  min-width: 0;
+}
+
+.logoBlock {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+  min-width: 0;
+  color: var(--t-fg);
+  font-size: 0.62rem;
+  line-height: 1.25;
+}
+
+.fetchColumns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  min-width: 0;
+}
+
+.fetchSection {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.preview .terminalFrame .terminalBody .fetchHeading {
+  margin: 0;
+  color: var(--t-c2);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.fetchList {
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.fetchRow {
+  display: grid;
+  grid-template-columns: 6.75rem minmax(0, 1fr);
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.fetchRow dt {
+  color: var(--t-soft);
+  text-transform: lowercase;
+}
+
+.fetchRow dd {
+  margin: 0;
+  color: var(--t-fg);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fetchSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+  min-width: 0;
+}
+
+.fetchSwatch {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6rem;
+  height: 1.05rem;
+  background: var(--t-c6);
+  margin-left: 0.35rem;
+  vertical-align: -0.2rem;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.sectionHeader {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  line-height: 1.05;
+  color: var(--foreground);
+}
+
+.sectionDescription {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+.commandCard {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  padding: 1.1rem;
+  min-width: 0;
+}
+
+.commandHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.commandTitle {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  min-width: 0;
+}
+
+.copyButton {
+  border: 1px solid color-mix(in srgb, var(--primary) 64%, transparent);
+  background: transparent;
+  color: var(--primary);
+  padding: 0.55rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.copyButton:hover,
+.copyButton:focus-visible {
+  outline: none;
+  opacity: 0.92;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 78%, transparent);
+}
+
+.codeBlock,
+.themeJson {
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+  background: color-mix(in srgb, var(--background) 86%, #050505 14%);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  min-width: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.codeBlock::-webkit-scrollbar,
+.themeJson::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.codeBlock::-webkit-scrollbar-track,
+.themeJson::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.codeBlock::-webkit-scrollbar-thumb,
+.themeJson::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 78%, transparent);
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.codeBlock::-webkit-scrollbar-thumb:hover,
+.themeJson::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--primary) 92%, transparent);
+}
+
+.commandStack {
+  display: grid;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.commandNote {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.installHint {
+  border: 1px dashed color-mix(in srgb, var(--border) 66%, transparent);
+  padding: 1.15rem;
+  background: color-mix(in srgb, var(--background) 96%, var(--card-bg) 4%);
+  min-width: 0;
+}
+
+.installHintTitle {
+  margin: 0;
+  font-weight: 700;
+}
+
+.installHintText {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.themeCard {
+  display: grid;
+  gap: 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  padding: 1rem;
+  min-width: 0;
+}
+
+.themeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.themeTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.swatch {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.themeJson {
+  max-height: 9.5rem;
+  overflow: auto;
+}
+
+ .inlinePath {
+  color: var(--t-c4);
+ }
+
+ .inlineOutput {
+  margin: 0.55rem 0 0.9rem;
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0 0.55rem;
+  overflow: hidden;
+  min-width: 0;
+  white-space: pre;
+ }
+
+ .tokenDim {
+  color: var(--t-muted);
+ }
+
+ .tokenKey {
+  color: var(--t-c3);
+ }
+
+ .tokenString {
+  color: var(--t-c2);
+ }
+
+ .tokenPunct {
+  color: var(--t-soft);
+ }
+
+ .tokenNumber {
+  color: var(--t-c5);
+ }
+
+@media (min-width: 820px) {
+  .controlsGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: end;
+  }
+
+  .fetchGrid {
+    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .fetchColumns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .controls {
+    padding: 1rem;
+  }
+
+  .commandCard {
+    padding: 1rem;
+  }
+
+  .terminalBody {
+    padding: 0.8rem;
+  }
+
+  .fetchRow {
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+  }
+}

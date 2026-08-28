@@ -1,0 +1,31 @@
+# ── Lenguajes de programación (darles prioridad en el gráfico de stats) ──
+*.ts    linguist-language=TypeScript linguist-vendored=false
+*.tsx   linguist-language=TypeScript linguist-vendored=false
+*.css   linguist-language=CSS linguist-vendored=false
+*.js    linguist-language=JavaScript linguist-vendored=false
+*.mjs   linguist-language=JavaScript linguist-vendored=false
+*.json  linguist-language=JSON linguist-vendored=false
+*.html  linguist-language=HTML linguist-vendored=false
+*.svg   linguist-language=SVG linguist-vendored=false
+
+# ── Markdown normal (documentación, no código) ──
+*.md    linguist-documentation
+
+# ── Archivos generados / vendor ──
+package-lock.json linguist-generated
+.next/            linguist-generated
+out/              linguist-generated
+node_modules/     linguist-generated
+colors/colors.md  linguist-generated
+
+# ── Finales de línea ──
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.mp4 binary
+*.woff2 binary
+*.ttf binary
+*.ico binary
