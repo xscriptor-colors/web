@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { useT } from "@/app/i18n-provider";
 
 import type {
@@ -9,6 +10,7 @@ import type {
 } from "@/types/resources/terminal.types";
 
 import { TerminalFiltersIcon } from "@/app/components/xcomponents/icons";
+import { withBasePath } from "@/lib/base-path";
 import styles from "./TerminalResourceSections.module.css";
 
 type TerminalResourceSectionsProps = {
@@ -389,7 +391,12 @@ export default function TerminalResourceSections({
           </div>
 
           {previewTerminalTokens ? (
-            <div className={styles.previewSurface}>
+              <div
+                className={styles.previewSurface}
+                style={{
+                  backgroundImage: `url(${withBasePath("/images/resources/terminal/terminal-background.webp")})`,
+                }}
+              >
               <div
                 className={styles.terminalFrame}
                 style={{
@@ -663,6 +670,61 @@ export default function TerminalResourceSections({
             </p>
           </div>
         )}
+      </section>
+
+      <section className={styles.media} aria-label="Previews">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t("previews")}</h2>
+          <p className={styles.sectionDescription}>
+            {t("previewsDescription")}
+          </p>
+        </div>
+        <figure className={styles.mediaBlock}>
+          <Image
+            src={withBasePath("/images/resources/terminal/terminal.gif")}
+            alt="Xscriptor terminal themes in action"
+            width={1000}
+            height={708}
+            className={styles.mediaImage}
+          />
+        </figure>
+      </section>
+
+      <section className={styles.prompts} aria-label="Prompts">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t("prompts")}</h2>
+          <p className={styles.sectionDescription}>
+            {t("promptsDescription")}
+          </p>
+        </div>
+        <figure className={styles.mediaBlock}>
+          <Image
+            src={withBasePath("/images/resources/terminal/prompts.gif")}
+            alt="Xscriptor terminal prompt styles"
+            width={900}
+            height={80}
+            className={styles.mediaImage}
+          />
+        </figure>
+        <div className={styles.toolChips}>
+          {["Starship", "OhMyPosh", "Spaceship", "BashZsh"].map((key) => (
+            <span key={key} className={styles.toolChip}>{t(`prompt${key}`)}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.cli} aria-label="CLI">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t("cli")}</h2>
+          <p className={styles.sectionDescription}>
+            {t("cliDescription")}
+          </p>
+        </div>
+        <div className={styles.toolChips}>
+          {["Helix", "ClaudeCode", "OpenCode", "GitNapse"].map((key) => (
+            <span key={key} className={styles.toolChip}>{t(`cli${key}`)}</span>
+          ))}
+        </div>
       </section>
 
       <section className={styles.themes} aria-label="Themes">

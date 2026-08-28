@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import type { VscodeTheme } from "@/types/resources/vscode.types";
+import SunIcon from "@/public/svg/vscode/sun.svg";
 
 const SWATCHES = ["color0","color1","color2","color3","color4","color5","color6","color7"] as const;
 
@@ -48,10 +49,7 @@ export default function FloatingThemeSwitcher({
           transform: open ? "rotate(45deg)" : "none",
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-        </svg>
+        <SunIcon width={18} height={18} />
       </button>
 
       {open && (

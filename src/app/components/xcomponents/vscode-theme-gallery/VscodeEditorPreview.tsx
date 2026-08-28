@@ -4,6 +4,16 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { themes, themeList } from "@/data/resources/vscode/webVscodeThemes";
+import ExternalLinkIcon from "@/public/svg/vscode/external-link.svg";
+import ChevronDownIcon from "@/public/svg/vscode/chevron-down.svg";
+import ChevronRightIcon from "@/public/svg/vscode/chevron-right.svg";
+import CloseIcon from "@/public/svg/vscode/close.svg";
+import PlusIcon from "@/public/svg/vscode/plus.svg";
+import ActivityFilesIcon from "@/public/svg/vscode/activity-files.svg";
+import ActivitySearchIcon from "@/public/svg/vscode/activity-search.svg";
+import ActivityGitIcon from "@/public/svg/vscode/activity-git.svg";
+import ActivityDebugIcon from "@/public/svg/vscode/activity-debug.svg";
+import ActivityExtensionsIcon from "@/public/svg/vscode/activity-extensions.svg";
 
 const MonacoEditor = dynamic(() => import("./MonacoEditor"), {
   ssr: false,
@@ -396,9 +406,7 @@ export default function VscodeEditorPreview({
           onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `${config.accent}28`}
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = `${config.accent}18`}
         >
-          <svg width="11" height="11" className="sm:w-[13px] sm:h-[13px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M7 17L17 7" /><path d="M7 7h10v10" />
-          </svg>
+          <ExternalLinkIcon width={11} height={11} className="sm:w-[13px] sm:h-[13px]" />
           <span className="hidden sm:inline">Open real VS Code</span>
           <span className="sm:hidden">Open</span>
         </a>
@@ -494,9 +502,9 @@ export default function VscodeEditorPreview({
               >
                 <div className="flex items-center gap-1">
                   {showFileList ? (
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><polyline points="6 9 12 15 18 9" /></svg>
+                    <ChevronDownIcon width={10} height={10} />
                   ) : (
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><polyline points="9 18 15 12 9 6" /></svg>
+                    <ChevronRightIcon width={10} height={10} />
                   )}
                   Explorer
                 </div>
@@ -504,9 +512,7 @@ export default function VscodeEditorPreview({
                   onClick={(e) => { e.stopPropagation(); setExplorerOpen(false); }}
                   className="text-white/20 hover:text-white/60"
                 >
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-                  </svg>
+                  <CloseIcon width={12} height={12} />
                 </button>
               </div>
               {showFileList && (
@@ -560,9 +566,7 @@ export default function VscodeEditorPreview({
                         onClick={() => handleClosePanel(i)}
                         className="ml-1 opacity-0 group-hover:opacity-100 hover:text-white transition-opacity"
                       >
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
+                        <CloseIcon width={10} height={10} />
                       </button>
                     )}
                   </div>
@@ -570,9 +574,7 @@ export default function VscodeEditorPreview({
               })}
               {panelFiles.length < 3 && (
                 <div className="px-2 opacity-30 cursor-pointer hover:opacity-60 transition-opacity">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
+                  <PlusIcon width={14} height={14} />
                 </div>
               )}
             </div>
@@ -642,38 +644,17 @@ export default function VscodeEditorPreview({
 }
 
 function ActivityIcon({ name }: { name: string }) {
-  const size = 16;
   switch (name) {
     case "files":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="3" y="3" width="18" height="18" rx="2" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="3" y1="9" x2="21" y2="9" />
-        </svg>
-      );
+      return <ActivityFilesIcon width={16} height={16} />;
     case "search":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="11" cy="11" r="7" /><line x1="16.5" y1="16.5" x2="21" y2="21" />
-        </svg>
-      );
+      return <ActivitySearchIcon width={16} height={16} />;
     case "git":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" /><line x1="8.5" y1="7.5" x2="15.5" y2="16.5" />
-        </svg>
-      );
+      return <ActivityGitIcon width={16} height={16} />;
     case "debug":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M8 7l-2 2v6l2 2" /><path d="M16 7l2 2v6l-2 2" /><line x1="12" y1="3" x2="12" y2="7" /><line x1="12" y1="17" x2="12" y2="21" />
-        </svg>
-      );
+      return <ActivityDebugIcon width={16} height={16} />;
     case "extensions":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="4" y="4" width="16" height="16" rx="2" /><line x1="4" y1="9" x2="20" y2="9" /><line x1="4" y1="15" x2="20" y2="15" /><line x1="9" y1="4" x2="9" y2="20" />
-        </svg>
-      );
+      return <ActivityExtensionsIcon width={16} height={16} />;
     default:
       return null;
   }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useT } from "@/app/i18n-provider";
 import { usePageMeta } from "@/app/hooks/usePageMeta";
+import { withBasePath } from "@/lib/base-path";
 import { THEMES } from "@/data/resources/colors/colors.data";
 import { FloatingPaths } from "@/app/components/xcomponents/FloatingPaths";
 import { XTitle } from "@/app/components/Xtexts";
@@ -69,7 +70,7 @@ export default function ColorsPage() {
                   >
                     <div className={styles.imageWrap}>
                       <Image
-                        src={card.src}
+                        src={withBasePath(card.src)}
                         alt={combinedLabel}
                         width={960}
                         height={540}

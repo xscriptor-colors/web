@@ -38,8 +38,8 @@ export default function Home() {
             lineHeight: 1.8,
           }}
         >
-          Open-source resources from the Xscriptor Colors organization — themes, tools, and
-          customizations for VS Code, JetBrains, Obsidian, terminal, and more.
+          Open-source resources from Xscriptor Colors — themes, tweaks and
+          customizations for VS Code, JetBrains, Obsidian, terminal, and more...
         </motion.p>
 
         <motion.div

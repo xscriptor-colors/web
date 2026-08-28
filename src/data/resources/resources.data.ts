@@ -1,4 +1,4 @@
-import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, FreshIcon, HyprlandIcon, XGitHubIcon } from "@/app/components/xcomponents/icons";
+import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon, IdeIcon, NvimIcon, XwwIcon } from "@/app/components/xcomponents/icons";
 
 import type { ResourceRepo } from "../../types/resources/resources.types";
 
@@ -74,7 +74,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Monorepo for editor and IDE X themes/schemes.",
     href: "https://github.com/xscriptor-colors/ide",
-    icon: XGitHubIcon,
+    icon: IdeIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -85,7 +85,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Nvim X setting",
     href: "https://github.com/xscriptor-colors/nvim",
-    icon: XGitHubIcon,
+    icon: NvimIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -96,7 +96,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Custom macOS desktop configurations, themes, and dotfiles featuring AeroSpace and Sketchybar.",
     href: "https://github.com/xscriptor-colors/macos",
-    icon: XGitHubIcon,
+    icon: MacosIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -106,8 +106,8 @@ export const resourceRepos: ResourceRepo[] = [
     name: "windows",
     description:
       "Desktop customisation: Linux • MacOs • Windows.",
-    href: "https://github.com/xscriptor-colors/windows",
-    icon: XGitHubIcon,
+    href: "/resources/windows",
+    icon: WindowsIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -140,7 +140,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Web application to create X fresh wallpapers",
     href: "https://github.com/xscriptor-colors/xww",
-    icon: XGitHubIcon,
+    icon: XwwIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,

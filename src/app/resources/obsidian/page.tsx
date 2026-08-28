@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useT } from "@/app/i18n-provider";
 import { usePageMeta } from "@/app/hooks/usePageMeta";
+import { withBasePath } from "@/lib/base-path";
 import { XTitle } from "@/app/components/Xtexts";
 import Footer from "@/app/components/footer/footer";
 
@@ -109,7 +110,7 @@ export default function ObsidianPage() {
               {MOBILE_SLIDES.map((slide) => (
                 <figure key={slide.src} className={styles.mobileFigure}>
                   <Image
-                    src={slide.src}
+                    src={withBasePath(slide.src)}
                     alt={slide.alt}
                     width={400}
                     height={800}
@@ -131,7 +132,7 @@ export default function ObsidianPage() {
             <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("desktopTitle")}</XTitle>
             <figure className={styles.desktopFigure}>
               <Image
-                src="/images/resources/obsidian/preview06.webp"
+                src={withBasePath("/images/resources/obsidian/preview06.webp")}
                 alt="Obsidian Xscriptor Desktop Theme Dark Mode"
                 width={1400}
                 height={800}
@@ -150,7 +151,7 @@ export default function ObsidianPage() {
           <div className={styles.section}>
             <figure className={styles.desktopFigure}>
               <Image
-                src="/images/resources/obsidian/preview07.webp"
+                src={withBasePath("/images/resources/obsidian/preview07.webp")}
                 alt="Obsidian Xscriptor Desktop Theme Dark Mode"
                 width={1400}
                 height={800}

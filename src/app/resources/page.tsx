@@ -9,7 +9,8 @@ import { resourceRepos } from "@/data/resources/resources.data";
 import {
   VscodeIcon, TerminalIcon, ObsidianIcon,
   JetBrainsIcon, WebLabIcon, ColorsIcon,
-  FreshIcon, HyprlandIcon,
+  FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon,
+  IdeIcon, NvimIcon, XwwIcon,
 } from "@/app/components/xcomponents/icons";
 import { XTitle } from "@/app/components/Xtexts";
 import { XTextDecrypt } from "@/app/components/Xtexts/XTextDecrypt";
@@ -23,6 +24,8 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; color?: strin
   obsidian: ObsidianIcon, jetbrains: JetBrainsIcon,
   web: WebLabIcon, colors: ColorsIcon,
   fresh: FreshIcon, hyprland: HyprlandIcon,
+  macos: MacosIcon, windows: WindowsIcon,
+  ide: IdeIcon, nvim: NvimIcon, xww: XwwIcon,
 };
 
 function RepoCard({ repo, colorIndex }: { repo: ResourceRepo; colorIndex: number }) {
