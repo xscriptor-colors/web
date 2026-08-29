@@ -40,7 +40,7 @@
     }
   },
   "VscodePage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "vscode",
     "description": "Xscriptor Themes suite represents the modern and unified visual ecosystem of X, designed specifically for advanced users, terminal enthusiasts, and developers who work long hours and demand absolute consistency in both aesthetics and accessibility."
   },
@@ -53,7 +53,7 @@
     "backToResources": "Back Home"
   },
   "JetBrainsPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "jetbrains",
     "description": "A collection of 12 city-inspired themes for IntelliJ-based IDEs. Nine dark schemes and three light schemes, all built on the IntelliJ Platform 2025.3+ with Islands UI support.",
     "featuresTitle": "Features",
@@ -79,7 +79,7 @@
     "viewSourceCode": "View Source Code"
   },
   "TerminalPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "terminal",
     "description": "My own collection of terminal themes and color schemes designed for a consistent look and feel across Windows, macOS, and Linux."
   },
@@ -127,7 +127,7 @@
     "cliGitNapse": "GitNapse"
   },
   "ObsidianPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "obsidian",
     "description": "A refined literary-inspired theme for Obsidian, featuring EB Garamond typography and flexible customization for any workspace.",
     "featuresTitle": "Features",
@@ -172,7 +172,7 @@
     "devViewSource": "View Source Code (labs branch)"
   },
   "ColorsPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "colors",
     "description": "All Xscriptor color palettes — themes reveal one by one. Hover to preview, click to copy.",
     "inspiration": "Inspiration"
@@ -256,7 +256,7 @@
     "viewSourceCode": "View Source Code"
   },
   "FreshPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "fresh",
     "description": "Custom color themes for Fresh, the terminal text editor — a complete collection of JSON theme files, all with the Xscriptor palette ecosystem.",
     "lookTitle": "Demo",
@@ -284,7 +284,7 @@
     "viewSourceCode": "View Source Code"
   },
   "NvimPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "nvim",
     "description": "Complete Neovim configuration with essential plugins, LSP, DAP, formatting, linting, and custom themes with the X scheme.",
     "lookTitle": "Previews",
@@ -325,7 +325,7 @@
     "viewSourceCode": "View Source Code"
   },
   "MacosPage": {
-    "title": "resources/",
+    "title": "colors/",
     "titleEm": "macos",
     "description": "Lightweight macOS desktop environment: SketchyBar topbar and AeroSpace window manager, configured for productivity and visual clarity.",
     "lookTitle": "Preview",
