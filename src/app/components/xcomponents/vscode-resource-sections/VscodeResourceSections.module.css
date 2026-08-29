@@ -12,6 +12,38 @@
   overflow-x: hidden;
 }
 
+.reelGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.reelBlock {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.reelImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+}
+
+@media (min-width: 768px) {
+  .reelGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reelWide {
+    grid-column: 1 / -1;
+  }
+}
+
 .videoFooter {
   display: flex;
   flex-direction: column;

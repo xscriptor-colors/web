@@ -144,7 +144,6 @@
   position: relative;
   padding: clamp(1rem, 3vw, 1.6rem);
   border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
-  background-image: url("/images/resources/terminal/terminal-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -450,6 +449,46 @@
   color: var(--text-muted);
   line-height: 1.7;
   max-width: 68ch;
+}
+
+.media,
+.prompts,
+.cli {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.mediaBlock {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.mediaImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+}
+
+.toolChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.toolChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  color: var(--foreground);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .commandCard {

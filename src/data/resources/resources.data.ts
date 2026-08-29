@@ -1,4 +1,4 @@
-import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, FreshIcon, HyprlandIcon, XGitHubIcon } from "@/app/components/xcomponents/icons";
+import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon, IdeIcon, NvimIcon, XwwIcon } from "@/app/components/xcomponents/icons";
 
 import type { ResourceRepo } from "../../types/resources/resources.types";
 
@@ -7,7 +7,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "vscode",
     description:
       "A complete collection of Xscriptor customizations for VSCode & Forks, including themes, code snippets, and UI mods.",
-    href: "/resources/vscode",
+    href: "/vscode",
     icon: VscodeIcon,
     iconProps: {
       color: "var(--primary)",
@@ -18,7 +18,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "jetbrains",
     description:
       "Essential settings and customizations to improve accessibility and personalization of JetBrains IDEs using the Xscriptor ecosystem (themes, snippets...).",
-    href: "/resources/jetbrains",
+    href: "/jetbrains",
     icon: JetBrainsIcon,
     iconProps: {
       color: "var(--primary)",
@@ -29,7 +29,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "terminal",
     description:
       "Twelve themes, one vision. The full palette of my perspective, adapted for most terminals. —X.",
-    href: "/resources/terminal",
+    href: "/terminal",
     icon: TerminalIcon,
     iconProps: {
       color: "var(--primary)",
@@ -40,7 +40,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "obsidian",
     description:
       "An elegant Obsidian theme for coders and writers with beautiful EB Garamond typography and flexible customization.",
-    href: "/resources/obsidian",
+    href: "/obsidian",
     icon: ObsidianIcon,
     iconProps: {
       color: "var(--primary)",
@@ -51,7 +51,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "colors",
     description:
       "All Xscriptor color palettes in one place — themes for terminals, editors, and IDEs.",
-    href: "/resources/colors",
+    href: "/colors",
     icon: ColorsIcon,
     iconProps: {
       color: "var(--primary)",
@@ -74,7 +74,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Monorepo for editor and IDE X themes/schemes.",
     href: "https://github.com/xscriptor-colors/ide",
-    icon: XGitHubIcon,
+    icon: IdeIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -84,8 +84,8 @@ export const resourceRepos: ResourceRepo[] = [
     name: "nvim",
     description:
       "Nvim X setting",
-    href: "https://github.com/xscriptor-colors/nvim",
-    icon: XGitHubIcon,
+    href: "/nvim",
+    icon: NvimIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -95,8 +95,8 @@ export const resourceRepos: ResourceRepo[] = [
     name: "macos",
     description:
       "Custom macOS desktop configurations, themes, and dotfiles featuring AeroSpace and Sketchybar.",
-    href: "https://github.com/xscriptor-colors/macos",
-    icon: XGitHubIcon,
+    href: "/macos",
+    icon: MacosIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -106,8 +106,8 @@ export const resourceRepos: ResourceRepo[] = [
     name: "windows",
     description:
       "Desktop customisation: Linux • MacOs • Windows.",
-    href: "https://github.com/xscriptor-colors/windows",
-    icon: XGitHubIcon,
+    href: "/windows",
+    icon: WindowsIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,
@@ -128,7 +128,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "fresh",
     description:
       "A collection of custom color themes for Fresh, the terminal text editor",
-    href: "https://github.com/xscriptor-colors/fresh",
+    href: "/fresh",
     icon: FreshIcon,
     iconProps: {
       color: "var(--primary)",
@@ -140,7 +140,7 @@ export const resourceRepos: ResourceRepo[] = [
     description:
       "Web application to create X fresh wallpapers",
     href: "https://github.com/xscriptor-colors/xww",
-    icon: XGitHubIcon,
+    icon: XwwIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,

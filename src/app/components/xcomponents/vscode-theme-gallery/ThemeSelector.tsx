@@ -5,6 +5,7 @@ import type { KeyboardEvent } from "react";
 import { useRef } from "react";
 
 import type { VscodeTheme } from "@/types/resources/vscode.types";
+import { withBasePath } from "@/lib/base-path";
 
 import styles from "./VscodeThemeGallery.module.css";
 
@@ -79,7 +80,7 @@ export default function ThemeSelector({
           title="Return to the intro video preview"
         >
           <Image
-            src="/images/resources/vscode/xscriptor-themes/icon.webp"
+            src={withBasePath("/images/vscode/xscriptor-themes/icon.webp")}
             alt=""
             width={72}
             height={72}
