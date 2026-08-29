@@ -12,7 +12,6 @@ const EMULATORS_FILE_PATH = path.join(
   process.cwd(),
   "src",
   "app",
-  "resources",
   "terminal",
   "emulators.md",
 );
@@ -20,7 +19,6 @@ const XFETCH_LOGO_FILE_PATH = path.join(
   process.cwd(),
   "src",
   "app",
-  "resources",
   "terminal",
   "xfetchlogologo.md",
 );
