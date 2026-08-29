@@ -3,7 +3,7 @@ import { XTitle } from "@/app/components/Xtexts";
 import { TerminalResourceSections } from "@/app/components/xcomponents/terminal-resource-sections";
 import { getTerminalResources } from "@/data/resources/terminal/terminalResources.data";
 import Footer from "@/app/components/footer/footer";
-import enMessages from "../../../../messages/en.json";
+import enMessages from "../../../messages/en.json";
 
 import styles from "./terminal.module.css";
 

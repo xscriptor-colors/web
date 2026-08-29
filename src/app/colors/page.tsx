@@ -18,19 +18,19 @@ type ImageCard = {
 };
 
 const IMAGE_CARDS: ImageCard[] = [
-  { src: "/images/resources/colors/x.webp", themeIndices: [0], label: "X" },
-  { src: "/images/resources/colors/x-tokio.webp", themeIndices: [0, 5], label: "X + Tokio" },
-  { src: "/images/resources/colors/madrid.webp", themeIndices: [1], label: "Madrid" },
-  { src: "/images/resources/colors/lahabana2.webp", themeIndices: [2], label: "Lahabana" },
-  { src: "/images/resources/colors/miami.webp", themeIndices: [3], label: "Miami" },
-  { src: "/images/resources/colors/paris.webp", themeIndices: [4], label: "Paris" },
-  { src: "/images/resources/colors/tokio.webp", themeIndices: [5], label: "Tokio" },
-  { src: "/images/resources/colors/oslo.webp", themeIndices: [6], label: "Oslo" },
-  { src: "/images/resources/colors/helsinki.webp", themeIndices: [7], label: "Helsinki" },
-  { src: "/images/resources/colors/berlin.webp", themeIndices: [8], label: "Berlin" },
-  { src: "/images/resources/colors/praha.webp", themeIndices: [10], label: "Praha" },
-  { src: "/images/resources/colors/bogota.webp", themeIndices: [11], label: "Bogota" },
-  { src: "/images/resources/colors/bogota-paris.webp", themeIndices: [11, 4], label: "Bogota + Paris" },
+  { src: "/images/colors/x.webp", themeIndices: [0], label: "X" },
+  { src: "/images/colors/x-tokio.webp", themeIndices: [0, 5], label: "X + Tokio" },
+  { src: "/images/colors/madrid.webp", themeIndices: [1], label: "Madrid" },
+  { src: "/images/colors/lahabana2.webp", themeIndices: [2], label: "Lahabana" },
+  { src: "/images/colors/miami.webp", themeIndices: [3], label: "Miami" },
+  { src: "/images/colors/paris.webp", themeIndices: [4], label: "Paris" },
+  { src: "/images/colors/tokio.webp", themeIndices: [5], label: "Tokio" },
+  { src: "/images/colors/oslo.webp", themeIndices: [6], label: "Oslo" },
+  { src: "/images/colors/helsinki.webp", themeIndices: [7], label: "Helsinki" },
+  { src: "/images/colors/berlin.webp", themeIndices: [8], label: "Berlin" },
+  { src: "/images/colors/praha.webp", themeIndices: [10], label: "Praha" },
+  { src: "/images/colors/bogota.webp", themeIndices: [11], label: "Bogota" },
+  { src: "/images/colors/bogota-paris.webp", themeIndices: [11, 4], label: "Bogota + Paris" },
 ];
 
 export default function ColorsPage() {

@@ -394,7 +394,7 @@ export default function TerminalResourceSections({
               <div
                 className={styles.previewSurface}
                 style={{
-                  backgroundImage: `url(${withBasePath("/images/resources/terminal/terminal-background.webp")})`,
+                  backgroundImage: `url(${withBasePath("/images/terminal/terminal-background.webp")})`,
                 }}
               >
               <div
@@ -681,7 +681,7 @@ export default function TerminalResourceSections({
         </div>
         <figure className={styles.mediaBlock}>
           <Image
-            src={withBasePath("/images/resources/terminal/terminal.gif")}
+            src={withBasePath("/images/terminal/terminal.gif")}
             alt="Xscriptor terminal themes in action"
             width={1000}
             height={708}
@@ -699,7 +699,7 @@ export default function TerminalResourceSections({
         </div>
         <figure className={styles.mediaBlock}>
           <Image
-            src={withBasePath("/images/resources/terminal/prompts.gif")}
+            src={withBasePath("/images/terminal/prompts.gif")}
             alt="Xscriptor terminal prompt styles"
             width={900}
             height={80}

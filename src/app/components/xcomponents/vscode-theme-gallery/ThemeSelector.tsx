@@ -80,7 +80,7 @@ export default function ThemeSelector({
           title="Return to the intro video preview"
         >
           <Image
-            src={withBasePath("/images/resources/vscode/xscriptor-themes/icon.webp")}
+            src={withBasePath("/images/vscode/xscriptor-themes/icon.webp")}
             alt=""
             width={72}
             height={72}

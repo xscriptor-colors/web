@@ -7,7 +7,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "vscode",
     description:
       "A complete collection of Xscriptor customizations for VSCode & Forks, including themes, code snippets, and UI mods.",
-    href: "/resources/vscode",
+    href: "/vscode",
     icon: VscodeIcon,
     iconProps: {
       color: "var(--primary)",
@@ -18,7 +18,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "jetbrains",
     description:
       "Essential settings and customizations to improve accessibility and personalization of JetBrains IDEs using the Xscriptor ecosystem (themes, snippets...).",
-    href: "/resources/jetbrains",
+    href: "/jetbrains",
     icon: JetBrainsIcon,
     iconProps: {
       color: "var(--primary)",
@@ -29,7 +29,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "terminal",
     description:
       "Twelve themes, one vision. The full palette of my perspective, adapted for most terminals. —X.",
-    href: "/resources/terminal",
+    href: "/terminal",
     icon: TerminalIcon,
     iconProps: {
       color: "var(--primary)",
@@ -40,7 +40,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "obsidian",
     description:
       "An elegant Obsidian theme for coders and writers with beautiful EB Garamond typography and flexible customization.",
-    href: "/resources/obsidian",
+    href: "/obsidian",
     icon: ObsidianIcon,
     iconProps: {
       color: "var(--primary)",
@@ -51,7 +51,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "colors",
     description:
       "All Xscriptor color palettes in one place — themes for terminals, editors, and IDEs.",
-    href: "/resources/colors",
+    href: "/colors",
     icon: ColorsIcon,
     iconProps: {
       color: "var(--primary)",
@@ -84,7 +84,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "nvim",
     description:
       "Nvim X setting",
-    href: "https://github.com/xscriptor-colors/nvim",
+    href: "/nvim",
     icon: NvimIcon,
     iconProps: {
       color: "var(--primary)",
@@ -106,7 +106,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "windows",
     description:
       "Desktop customisation: Linux • MacOs • Windows.",
-    href: "/resources/windows",
+    href: "/windows",
     icon: WindowsIcon,
     iconProps: {
       color: "var(--primary)",
@@ -128,7 +128,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "fresh",
     description:
       "A collection of custom color themes for Fresh, the terminal text editor",
-    href: "https://github.com/xscriptor-colors/fresh",
+    href: "/fresh",
     icon: FreshIcon,
     iconProps: {
       color: "var(--primary)",

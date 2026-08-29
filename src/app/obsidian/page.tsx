@@ -19,9 +19,9 @@ const FEATURES = [
 ];
 
 const MOBILE_SLIDES = [
-  { src: "/images/resources/obsidian/preview02.webp", alt: "Obsidian Xscriptor Mobile Theme Dark Mode 1" },
-  { src: "/images/resources/obsidian/preview03.webp", alt: "Obsidian Xscriptor Mobile Theme Dark Mode 2" },
-  { src: "/images/resources/obsidian/preview04.webp", alt: "Obsidian Xscriptor Mobile Theme Light Mode" },
+  { src: "/images/obsidian/preview02.webp", alt: "Obsidian Xscriptor Mobile Theme Dark Mode 1" },
+  { src: "/images/obsidian/preview03.webp", alt: "Obsidian Xscriptor Mobile Theme Dark Mode 2" },
+  { src: "/images/obsidian/preview04.webp", alt: "Obsidian Xscriptor Mobile Theme Light Mode" },
 ];
 
 export default function ObsidianPage() {
@@ -132,7 +132,7 @@ export default function ObsidianPage() {
             <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("desktopTitle")}</XTitle>
             <figure className={styles.desktopFigure}>
               <Image
-                src={withBasePath("/images/resources/obsidian/preview06.webp")}
+                src={withBasePath("/images/obsidian/preview06.webp")}
                 alt="Obsidian Xscriptor Desktop Theme Dark Mode"
                 width={1400}
                 height={800}
@@ -151,7 +151,7 @@ export default function ObsidianPage() {
           <div className={styles.section}>
             <figure className={styles.desktopFigure}>
               <Image
-                src={withBasePath("/images/resources/obsidian/preview07.webp")}
+                src={withBasePath("/images/obsidian/preview07.webp")}
                 alt="Obsidian Xscriptor Desktop Theme Dark Mode"
                 width={1400}
                 height={800}

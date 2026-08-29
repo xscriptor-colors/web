@@ -1,47 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useT } from "@/app/i18n-provider";
 import { usePageMeta } from "@/app/hooks/usePageMeta";
 import { withBasePath } from "@/lib/base-path";
 import { XTitle } from "@/app/components/Xtexts";
 import Footer from "@/app/components/footer/footer";
 
-import styles from "./windows.module.css";
-
-const GALLERY = [
-  { src: "/images/resources/windows/preview1.webp", alt: "Windows Xscriptor desktop preview 1", width: 1200, height: 677 },
-  { src: "/images/resources/windows/preview2.webp", alt: "Windows Xscriptor desktop preview 2", width: 1200, height: 676 },
-  { src: "/images/resources/windows/preview3.webp", alt: "Windows Xscriptor desktop preview 3", width: 1200, height: 673 },
-  { src: "/images/resources/windows/preview4.webp", alt: "Windows Xscriptor desktop preview 4", width: 1200, height: 676 },
-];
+import styles from "./fresh.module.css";
 
 const THEMES = [
-  { name: "X", dark: true },
-  { name: "Lahabana", dark: true },
-  { name: "Miami", dark: true },
-  { name: "Paris", dark: true },
-  { name: "Tokio", dark: true },
-  { name: "Oslo", dark: true },
-  { name: "Berlin", dark: true },
-  { name: "Praha", dark: true },
-  { name: "Bogota", dark: true },
-  { name: "Madrid", dark: false },
-  { name: "Helsinki", dark: false },
-  { name: "London", dark: false },
+  { name: "x", label: "X", dark: true },
+  { name: "lahabana", label: "Lahabana", dark: true },
+  { name: "miami", label: "Miami", dark: true },
+  { name: "paris", label: "Paris", dark: true },
+  { name: "tokio", label: "Tokio", dark: true },
+  { name: "oslo", label: "Oslo", dark: true },
+  { name: "berlin", label: "Berlin", dark: true },
+  { name: "praha", label: "Praha", dark: true },
+  { name: "bogota", label: "Bogota", dark: true },
+  { name: "madrid", label: "Madrid", dark: false },
+  { name: "helsinki", label: "Helsinki", dark: false },
+  { name: "london", label: "London", dark: false },
 ];
 
-const STRUCTURE = [
-  { key: "Yasb" },
-  { key: "Zebar" },
-  { key: "Windhawk" },
-];
-
-const COMPAT = ["compat1", "compat2"];
-
-export default function WindowsPage() {
-  const t = useT("WindowsPage");
+export default function FreshPage() {
+  const t = useT("FreshPage");
   usePageMeta(t("title") + " " + t("titleEm"));
 
   const [activeIdx, setActiveIdx] = useState(0);
@@ -103,23 +87,19 @@ export default function WindowsPage() {
           data-visible={visible(1)}
         >
           <div className={styles.section}>
-            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("galleryTitle")}</XTitle>
-            <div className={styles.galleryGrid}>
-              {GALLERY.map((slide, i) => (
-                <figure
-                  key={slide.src}
-                  className={`${styles.imageBlock} ${i < 2 ? styles.galleryWide : ""}`}
-                >
-                  <Image
-                    src={withBasePath(slide.src)}
-                    alt={slide.alt}
-                    width={slide.width}
-                    height={slide.height}
-                    className={styles.imageBlockContent}
-                  />
-                </figure>
-              ))}
-            </div>
+            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("lookTitle")}</XTitle>
+            <figure className={styles.videoBlock}>
+              <video
+                className={styles.video}
+                src={withBasePath("/images/fresh/preview.mp4")}
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                preload="metadata"
+              />
+            </figure>
           </div>
         </section>
 
@@ -130,18 +110,8 @@ export default function WindowsPage() {
           data-visible={visible(2)}
         >
           <div className={styles.section}>
-            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("structureTitle")}</XTitle>
-            <p className={styles.configDescription}>{t("structureDesc")}</p>
-            <div className={styles.structureStack}>
-              {STRUCTURE.map((block) => (
-                <div key={block.key} className={styles.structureBlock}>
-                  <XTitle as="h3" variant="label" className={styles.structureLabel}>
-                    {t(`struct${block.key}Title`)}
-                  </XTitle>
-                  <p className={styles.structureText}>{t(`struct${block.key}Desc`)}</p>
-                </div>
-              ))}
-            </div>
+            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("overviewTitle")}</XTitle>
+            <p className={styles.configDescription}>{t("overviewDesc")}</p>
           </div>
           <div className={styles.section}>
             <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("themesTitle")}</XTitle>
@@ -152,7 +122,7 @@ export default function WindowsPage() {
                   <span className={styles.themeChipBadge} data-dark={theme.dark}>
                     {theme.dark ? t("dark") : t("light")}
                   </span>
-                  <span className={styles.themeChipName}>{theme.name}</span>
+                  <span className={styles.themeChipName}>{theme.label}</span>
                 </div>
               ))}
             </div>
@@ -171,19 +141,10 @@ export default function WindowsPage() {
               <div className={styles.installBlock}>
                 <XTitle as="h3" variant="label" className={styles.installLabel}>{t("installRemote")}</XTitle>
                 <pre className={styles.codeBlock}>
-                  <code>{t("installRemoteCmdYasb")}</code>
+                  <code>{t("installCurl")}</code>
                 </pre>
                 <pre className={styles.codeBlock}>
-                  <code>{t("installRemoteCmdZebar")}</code>
-                </pre>
-              </div>
-              <div className={styles.installBlock}>
-                <XTitle as="h3" variant="label" className={styles.installLabel}>{t("installClone")}</XTitle>
-                <pre className={styles.codeBlock}>
-                  <code>{t("installCloneCmdYasb")}</code>
-                </pre>
-                <pre className={styles.codeBlock}>
-                  <code>{t("installCloneCmdZebar")}</code>
+                  <code>{t("installWget")}</code>
                 </pre>
               </div>
               <p className={styles.installText}>{t("installNote")}</p>
@@ -198,27 +159,19 @@ export default function WindowsPage() {
           data-visible={visible(4)}
         >
           <div className={styles.section}>
-            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("usageTitle")}</XTitle>
+            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("uninstallTitle")}</XTitle>
             <div className={styles.installStack}>
               <div className={styles.installBlock}>
-                <XTitle as="h3" variant="label" className={styles.installLabel}>{t("usageZebarTitle")}</XTitle>
-                <p className={styles.installText}>{t("usageZebarDesc")}</p>
+                <XTitle as="h3" variant="label" className={styles.installLabel}>{t("uninstallRemote")}</XTitle>
+                <pre className={styles.codeBlock}>
+                  <code>{t("uninstallCurl")}</code>
+                </pre>
+                <pre className={styles.codeBlock}>
+                  <code>{t("uninstallWget")}</code>
+                </pre>
               </div>
-              <div className={styles.installBlock}>
-                <XTitle as="h3" variant="label" className={styles.installLabel}>{t("usageYasbTitle")}</XTitle>
-                <p className={styles.installText}>{t("usageYasbDesc")}</p>
-              </div>
+              <p className={styles.installText}>{t("uninstallNote")}</p>
             </div>
-          </div>
-          <div className={styles.section}>
-            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("compatTitle")}</XTitle>
-            <ul className={styles.featuresList}>
-              {COMPAT.map((key) => (
-                <li key={key} className={styles.featureItem}>
-                  {t(key)}
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
@@ -228,10 +181,31 @@ export default function WindowsPage() {
           data-dimmed={dim(5)}
           data-visible={visible(5)}
         >
+          <div className={styles.section}>
+            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("manualTitle")}</XTitle>
+            <pre className={styles.codeBlock}>
+              <code>{t("manualCmd")}</code>
+            </pre>
+          </div>
+          <div className={styles.section}>
+            <XTitle as="h2" variant="subsection" className={styles.sectionTitle}>{t("notesTitle")}</XTitle>
+            <ul className={styles.featuresList}>
+              <li className={styles.featureItem}>{t("note1")}</li>
+              <li className={styles.featureItem}>{t("note2")}</li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          data-stage={6}
+          className={styles.stageSurface}
+          data-dimmed={dim(6)}
+          data-visible={visible(6)}
+        >
           <div className={styles.viewSourceWrap}>
             <a
               className={styles.button}
-              href="https://github.com/xscriptor-colors/windows"
+              href="https://github.com/xscriptor-colors/fresh"
               target="_blank"
               rel="noopener noreferrer"
             >

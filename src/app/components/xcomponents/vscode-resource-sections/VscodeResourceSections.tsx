@@ -1,11 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useT } from "@/app/i18n-provider";
 import Footer from "@/app/components/footer/footer";
 import { VscodeThemeGallery } from "../vscode-theme-gallery";
-import VscodeIntroMedia from "../vscode-theme-gallery/VscodeIntroMedia";
+import { withBasePath } from "@/lib/base-path";
 import styles from "./VscodeResourceSections.module.css";
+
+const REEL = [
+  { src: "/images/vscode/preview1.gif", alt: "Xscriptor VSCode themes preview 1", wide: false },
+  { src: "/images/vscode/preview2.gif", alt: "Xscriptor VSCode themes preview 2", wide: false },
+  { src: "/images/vscode/preview3.gif", alt: "Xscriptor VSCode themes preview 3", wide: true },
+];
 
 export default function VscodeResourceSections() {
   const t = useT("VscodeThemeGallery");
@@ -16,7 +23,22 @@ export default function VscodeResourceSections() {
         <VscodeThemeGallery />
       </section>
 
-      <VscodeIntroMedia videoSrc="https://i.imgur.com/gNmRAgD.mp4" />
+      <section className={styles.reelGrid} aria-label="Preview reel">
+        {REEL.map((slide) => (
+          <figure
+            key={slide.src}
+            className={`${styles.reelBlock} ${slide.wide ? styles.reelWide : ""}`}
+          >
+            <Image
+              src={withBasePath(slide.src)}
+              alt={slide.alt}
+              width={720}
+              height={405}
+              className={styles.reelImage}
+            />
+          </figure>
+        ))}
+      </section>
 
       <section className={styles.videoFooter}>
         <p className={styles.a11yNote}>{t("a11yNote")}</p>
@@ -37,7 +59,7 @@ export default function VscodeResourceSections() {
           >
             {t("productIcons")}
           </a>
-          <Link className={styles.secondaryButton} href="/resources">
+          <Link className={styles.secondaryButton} href="/">
             {t("backToResources")}
           </Link>
         </div>

@@ -53,12 +53,11 @@ export default function ClassicControls() {
 
   const links = [
     { id: "home", url: "/", labelKey: "menuHome", ariaKey: "home" },
-    { id: "resources", url: "/resources", labelKey: "menuResources", ariaKey: "resources" },
-    { id: "vscode", url: "/resources/vscode", labelKey: "vscode", ariaKey: "resources" },
-    { id: "jetbrains", url: "/resources/jetbrains", labelKey: "jetbrains", ariaKey: "resources" },
-    { id: "terminal", url: "/resources/terminal", labelKey: "terminal", ariaKey: "resources" },
-    { id: "obsidian", url: "/resources/obsidian", labelKey: "obsidian", ariaKey: "resources" },
-    { id: "colors", url: "/resources/colors", labelKey: "colors", ariaKey: "resources" },
+    { id: "vscode", url: "/vscode", labelKey: "vscode", ariaKey: "resources" },
+    { id: "jetbrains", url: "/jetbrains", labelKey: "jetbrains", ariaKey: "resources" },
+    { id: "terminal", url: "/terminal", labelKey: "terminal", ariaKey: "resources" },
+    { id: "obsidian", url: "/obsidian", labelKey: "obsidian", ariaKey: "resources" },
+    { id: "colors", url: "/colors", labelKey: "colors", ariaKey: "resources" },
     { id: "github", url: "https://github.com/xscriptor-colors", labelKey: "menuXscriptor", ariaKey: "xscriptor", external: true },
   ];
 

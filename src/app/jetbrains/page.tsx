@@ -81,7 +81,7 @@ export default function JetBrainsPage() {
           </header>
           <figure className={styles.imageBlock}>
             <Image
-              src={withBasePath("/images/resources/jetbrains/preview1.webp")}
+              src={withBasePath("/images/jetbrains/preview1.webp")}
               alt="JetBrains Xscriptor theme overview"
               width={2400}
               height={1350}
@@ -109,7 +109,7 @@ export default function JetBrainsPage() {
           <div className={styles.imagePair}>
             <figure className={styles.imageBlock}>
               <Image
-                src={withBasePath("/images/resources/jetbrains/preview2.webp")}
+                src={withBasePath("/images/jetbrains/preview2.webp")}
                 alt="JetBrains Xscriptor editor preview"
                 width={1200}
                 height={675}
@@ -118,7 +118,7 @@ export default function JetBrainsPage() {
             </figure>
             <figure className={styles.imageBlock}>
               <Image
-                src={withBasePath("/images/resources/jetbrains/preview3.webp")}
+                src={withBasePath("/images/jetbrains/preview3.webp")}
                 alt="JetBrains Xscriptor code syntax"
                 width={1200}
                 height={675}
@@ -150,7 +150,7 @@ export default function JetBrainsPage() {
           </div>
           <figure className={styles.imageBlock}>
             <Image
-              src={withBasePath("/images/resources/jetbrains/preview4.webp")}
+              src={withBasePath("/images/jetbrains/preview4.webp")}
               alt="JetBrains Xscriptor UI details"
               width={2400}
               height={1350}
@@ -189,7 +189,7 @@ export default function JetBrainsPage() {
           <div className={styles.imagePair}>
             <figure className={styles.imageBlock}>
               <Image
-                src={withBasePath("/images/resources/jetbrains/preview5.webp")}
+                src={withBasePath("/images/jetbrains/preview5.webp")}
                 alt="JetBrains Xscriptor dark theme showcase"
                 width={1200}
                 height={675}
@@ -198,7 +198,7 @@ export default function JetBrainsPage() {
             </figure>
             <figure className={styles.imageBlock}>
               <Image
-                src={withBasePath("/images/resources/jetbrains/preview6.webp")}
+                src={withBasePath("/images/jetbrains/preview6.webp")}
                 alt="JetBrains Xscriptor light theme showcase"
                 width={1200}
                 height={675}
