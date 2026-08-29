@@ -1,3 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-<path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.929M17.5 4.8L18.375 4.8L21 7.425L20.125 7.425ZM20.125 4.8L21 4.8L18.375 7.425L17.5 7.425Z" />
+<defs>
+  <linearGradient id="xg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fc618d" />
+    <stop offset="100%" stop-color="#948ae3" />
+  </linearGradient>
+</defs>
+
+<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#xg)" d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.929M17.5 4.8L18.375 4.8L21 7.425L20.125 7.425ZM20.125 4.8L21 4.8L18.375 7.425L17.5 7.425Z" />
 </svg>
