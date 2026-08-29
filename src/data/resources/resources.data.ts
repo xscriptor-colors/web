@@ -95,7 +95,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "macos",
     description:
       "Custom macOS desktop configurations, themes, and dotfiles featuring AeroSpace and Sketchybar.",
-    href: "https://github.com/xscriptor-colors/macos",
+    href: "/macos",
     icon: MacosIcon,
     iconProps: {
       color: "var(--primary)",

@@ -13,7 +13,6 @@ import {
   FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon,
   IdeIcon, NvimIcon, XwwIcon,
 } from "@/app/components/xcomponents/icons";
-import Footer from "@/app/components/footer/footer";
 import styles from "./home.module.css";
 import type { ResourceRepo } from "@/types/resources/resources.types";
 
@@ -116,8 +115,6 @@ export default function Home() {
             ))}
           </div>
         </motion.div>
-
-        <Footer />
       </div>
     </>
   );

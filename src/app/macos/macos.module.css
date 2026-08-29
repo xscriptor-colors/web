@@ -1,0 +1,297 @@
+.page {
+  width: 100%;
+  min-width: 0;
+}
+
+.stack {
+  display: grid;
+  gap: clamp(4.5rem, 12vh, 14rem);
+  min-width: 0;
+}
+
+.stageSurface {
+  display: grid;
+  gap: 2rem;
+  min-width: 0;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(2rem);
+  transition:
+    opacity 0.55s ease,
+    filter 0.55s ease,
+    transform 0.55s ease;
+}
+
+.stageSurface[data-visible="true"] {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.stageSurface[data-dimmed="true"] {
+  opacity: 0.34;
+  filter: blur(6px) saturate(0.72) brightness(0.78);
+  transform: scale(0.985);
+}
+
+.header {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.description {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.section {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--foreground);
+}
+
+.configDescription {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galleryWide {
+    grid-column: 1 / -1;
+  }
+}
+
+.videoBlock {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: #000;
+}
+
+.imageBlock {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.imageBlockContent {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+}
+
+.featuresList {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featureItem {
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  color: var(--foreground);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.structureStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.structureBlock {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+}
+
+.structureLabel {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.structureText {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.themesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.themeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  min-width: 0;
+}
+
+.themeChipBadge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.35rem;
+}
+
+.themeChipBadge[data-dark="true"] {
+  background: #1a1a2e;
+  color: #a78bfa;
+}
+
+.themeChipBadge[data-dark="false"] {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.themeChipName {
+  font-size: 0.85rem;
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.installStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.installBlock {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.installLabel {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.installText {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.codeBlock {
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+  background: color-mix(in srgb, var(--background) 86%, #050505 14%);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  min-width: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  word-break: break-word;
+  white-space: pre-wrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.viewSourceWrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.78rem 1.8rem;
+  border: 1px solid var(--primary);
+  color: var(--background);
+  background: var(--primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  outline: none;
+  opacity: 0.88;
+}
+
+@media (max-width: 767px) {
+  .stack {
+    gap: 3.5rem;
+  }
+
+  .stageSurface {
+    gap: 1.5rem;
+    transform: translateY(1.5rem);
+  }
+
+  .stageSurface[data-dimmed="true"] {
+    opacity: 0.28;
+    filter: blur(5px) saturate(0.7) brightness(0.8);
+    transform: scale(0.99);
+  }
+
+  .description {
+    line-height: 1.7;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
