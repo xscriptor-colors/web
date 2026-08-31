@@ -55,6 +55,7 @@ export default function ClassicControls() {
     { id: "home", url: "/", labelKey: "menuHome", ariaKey: "home" },
     { id: "vscode", url: "/vscode", labelKey: "vscode", ariaKey: "resources" },
     { id: "jetbrains", url: "/jetbrains", labelKey: "jetbrains", ariaKey: "resources" },
+    { id: "hyprland", url: "/hyprland", labelKey: "hyprland", ariaKey: "resources" },
     { id: "terminal", url: "/terminal", labelKey: "terminal", ariaKey: "resources" },
     { id: "obsidian", url: "/obsidian", labelKey: "obsidian", ariaKey: "resources" },
     { id: "colors", url: "/colors", labelKey: "colors", ariaKey: "resources" },
