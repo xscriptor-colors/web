@@ -200,7 +200,8 @@
     "jetbrains": "jetbrains",
     "terminal": "terminal",
     "obsidian": "obsidian",
-    "colors": "colors"
+    "colors": "colors",
+    "hyprland": "hyprland"
   },
   "Navbar": {
     "home": "Go home",
@@ -370,6 +371,26 @@
     "customDesc": "SketchyBar supports multiple color palettes. Themes live in sketchybar/themes/ and use the same palette names as the VS Code Xscriptor themes: X, Madrid, Lahabana, Miami, Paris, Tokio, Oslo, Helsinki, Berlin, London, Praha, and Bogota.",
     "customCmd": "# List the current theme and available palettes\n./sketchybar/theme.sh\n\n# Switch to a palette and reload the bar\n./sketchybar/theme.sh miami",
     "customNote": "You can also cycle themes directly from the topbar: click the palette item to switch to the next palette. The active theme is persisted in ~/.config/sketchybar/theme (default: x).",
+    "viewSourceCode": "View Source Code"
+  },
+  "HyprlandPage": {
+    "title": "colors/",
+    "titleEm": "hyprland",
+    "description": "QuickShell QML shell + 12-palette theming for Hyprland on X. A clean, performance-oriented configuration for Arch Linux, built on a modular Lua base with the Xscriptor palettes as the single source of truth.",
+    "shellTitle": "QuickShell Desktop Shell",
+    "feature1": "QuickShell QML UI — app launcher, clipboard, calendar/weather, network, audio, battery, music (MPRIS), wallpaper picker, system monitor, RSS reader, file search, quick notes, focus timer, screen recording, and QR scanner",
+    "feature2": "Lua modular config (env, colors, keybinds, animations, rules, autostart) with the active palette",
+    "feature3": "NVIDIA Optimus GPU mode switching (integrated/hybrid/nvidia) via keybind or Rofi",
+    "feature4": "Multi-monitor auto-detection at max refresh rate with a Rofi-based position/resolution/refresh rate manager",
+    "feature5": "SDDM theme synced to the active palette, GPU screen recording with separate audio channels, and Neovim from xscriptor-colors/nvim with palette data from the panel",
+    "paletteTitle": "12-Palette System",
+    "paletteDesc": "Twelve fixed Xscriptor palettes live in dock/palettes and drive the bar, window borders, kitty, starship, VS Code (color + icons), SDDM and Neovim in real time through theme-sync.sh. Open the Dock Editor and swap the palette instantly — every app follows without touching any config.",
+    "customizationTitle": "Customization",
+    "customizationDesc": "The whole desktop is controlled from your keyboard and a few configuration files.",
+    "customizationExample": "SUPER + Return     Terminal\nSUPER + D         Apps\nSUPER + W         Wallpaper\nSUPER + S         Calendar\nSUPER + SHIFT + S Settings panel\nSUPER + SHIFT + D Dock editor (palette, borders, zones)\nSUPER + SHIFT + B Window effects\nSUPER + Space     Float\nSUPER + L         Lock\nPrint             Screenshot",
+    "installTitle": "Installation",
+    "installDesc": "The installer detects your distro and GPU, installs packages (Hyprland, QuickShell, SwayOSD, kitty, rofi, and more), backs up existing configs, deploys all dotfiles, installs the SDDM theme, and pulls kitty and Neovim from their own repositories (xscriptor-colors/terminal, xscriptor-colors/nvim).",
+    "installCmd": "git clone https://github.com/xscriptor-colors/hyprland.git\ncd hyprland\nchmod +x install.sh\n./install.sh",
     "viewSourceCode": "View Source Code"
   }
 }

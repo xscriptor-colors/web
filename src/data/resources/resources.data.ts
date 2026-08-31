@@ -117,7 +117,7 @@ export const resourceRepos: ResourceRepo[] = [
     name: "hyprland",
     description:
       "A clean, performance-oriented Hyprland configuration featuring a [X] aesthetic, optimized for productivity and seamless workflow on X and Arch Linux",
-    href: "https://github.com/xscriptor-colors/hyprland",
+    href: "/hyprland",
     icon: HyprlandIcon,
     iconProps: {
       color: "var(--primary)",
