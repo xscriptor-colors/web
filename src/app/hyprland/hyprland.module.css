@@ -98,6 +98,19 @@
   border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
 }
 
+.imagePair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .imagePair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .codeBlock {
   margin: 0;
   border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);

@@ -15,6 +15,8 @@ const REEL = [
   { src: "/images/gifs/hyprland/hyprland-demo-2.gif", alt: "Xscriptor Hyprland QuickShell widgets" },
   { src: "/images/gifs/hyprland/hyprland-demo-4.gif", alt: "Xscriptor Hyprland Dock Editor palette switcher" },
   { src: "/images/gifs/hyprland/hyprland-demo-3.gif", alt: "Xscriptor Hyprland workspace preview" },
+  { src: "/images/gifs/hyprland/hyprland-demo-5.gif", alt: "Xscriptor Hyprland wallpaper picker" },
+  { src: "/images/gifs/hyprland/hyprland-demo-6.gif", alt: "Xscriptor Hyprland dynamic theming preview" },
 ];
 
 export default function HyprlandPage() {
@@ -170,6 +172,29 @@ export default function HyprlandPage() {
             <pre className={styles.codeBlock}>
               <code>{t("installCmd")}</code>
             </pre>
+          </div>
+
+          <div className={styles.imagePair}>
+            <figure className={styles.imageBlock}>
+              <Image
+                src={withBasePath(REEL[4].src)}
+                alt={REEL[4].alt}
+                width={1280}
+                height={720}
+                className={styles.imageBlockContent}
+                unoptimized
+              />
+            </figure>
+            <figure className={styles.imageBlock}>
+              <Image
+                src={withBasePath(REEL[5].src)}
+                alt={REEL[5].alt}
+                width={1280}
+                height={720}
+                className={styles.imageBlockContent}
+                unoptimized
+              />
+            </figure>
           </div>
 
           <div className={styles.viewSourceWrap}>
