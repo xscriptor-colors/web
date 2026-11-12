@@ -1,4 +1,4 @@
-import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon, IdeIcon, NvimIcon, XwwIcon } from "@/app/components/xcomponents/icons";
+import { JetBrainsIcon, ObsidianIcon, TerminalIcon, VscodeIcon, WebLabIcon, ColorsIcon, CursorsIcon, FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon, IdeIcon, NvimIcon, XwwIcon } from "@/app/components/xcomponents/icons";
 
 import type { ResourceRepo } from "../../types/resources/resources.types";
 
@@ -141,6 +141,17 @@ export const resourceRepos: ResourceRepo[] = [
       "Web application to create X fresh wallpapers",
     href: "https://github.com/xscriptor-colors/xww",
     icon: XwwIcon,
+    iconProps: {
+      color: "var(--primary)",
+      size: 25,
+    },
+  },
+  {
+    name: "cursors",
+    description:
+      "Two original Xcursor themes for Linux with 179 entries each, ready for Hyprland, Wayland, X11 and every Xcursor-aware desktop.",
+    href: "/cursors",
+    icon: CursorsIcon,
     iconProps: {
       color: "var(--primary)",
       size: 25,

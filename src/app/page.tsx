@@ -11,7 +11,7 @@ import {
   VscodeIcon, TerminalIcon, ObsidianIcon,
   JetBrainsIcon, WebLabIcon, ColorsIcon,
   FreshIcon, HyprlandIcon, MacosIcon, WindowsIcon,
-  IdeIcon, NvimIcon, XwwIcon,
+  IdeIcon, NvimIcon, XwwIcon, CursorsIcon,
 } from "@/app/components/xcomponents/icons";
 import styles from "./home.module.css";
 import type { ResourceRepo } from "@/types/resources/resources.types";
@@ -23,6 +23,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; color?: strin
   fresh: FreshIcon, hyprland: HyprlandIcon,
   macos: MacosIcon, windows: WindowsIcon,
   ide: IdeIcon, nvim: NvimIcon, xww: XwwIcon,
+  cursors: CursorsIcon,
 };
 
 function RepoCard({ repo, colorIndex }: { repo: ResourceRepo; colorIndex: number }) {

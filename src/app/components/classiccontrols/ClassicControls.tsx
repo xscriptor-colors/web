@@ -59,6 +59,7 @@ export default function ClassicControls() {
     { id: "terminal", url: "/terminal", labelKey: "terminal", ariaKey: "resources" },
     { id: "obsidian", url: "/obsidian", labelKey: "obsidian", ariaKey: "resources" },
     { id: "colors", url: "/colors", labelKey: "colors", ariaKey: "resources" },
+    { id: "cursors", url: "/cursors", labelKey: "cursors", ariaKey: "resources" },
     { id: "github", url: "https://github.com/xscriptor-colors", labelKey: "menuXscriptor", ariaKey: "xscriptor", external: true },
   ];
 

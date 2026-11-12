@@ -22,6 +22,7 @@
     "repo": {
       "ai": "Artificial intelligence tools, prompts, skills, and model configurations for the Xscriptor ecosystem.",
       "colors": "All Xscriptor color palettes in one place — themes for terminals, editors, and IDEs.",
+      "cursors": "Two original Xcursor themes for Linux with 179 entries each, ready for Hyprland, Wayland, X11 and every Xcursor-aware desktop.",
       "web": "Web projects and UI components — Samurai security platform, Shinobi scraper, and the Xcomponents library.",
       "fresh": "A collection of custom color themes for Fresh, the terminal text editor",
       "helix": "Xscriptor Themes for helix",
@@ -177,6 +178,11 @@
     "description": "All Xscriptor color palettes — themes reveal one by one. Hover to preview, click to copy.",
     "inspiration": "Inspiration"
   },
+  "CursorsPage": {
+    "title": "colors/",
+    "titleEm": "cursors",
+    "description": "Two original Xcursor themes for Linux, with 179 entries each and a complete installation guide for Hyprland, Wayland, GNOME, KDE, Xfce and X11."
+  },
   "Footer": {
     "text": "Xscriptor/Dev"
   },
@@ -201,6 +207,7 @@
     "terminal": "terminal",
     "obsidian": "obsidian",
     "colors": "colors",
+    "cursors": "cursors",
     "hyprland": "hyprland"
   },
   "Navbar": {

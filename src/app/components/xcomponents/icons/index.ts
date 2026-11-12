@@ -10,6 +10,7 @@ export { default as WebLabIcon } from "./WebLabIcon";
 export { default as XGitHubIcon } from "./XGitHubIcon";
 export { default as XIcon } from "./XIcon";
 export { default as ColorsIcon } from "./ColorsIcon";
+export { default as CursorsIcon } from "./CursorsIcon";
 export { default as FreshIcon } from "./FreshIcon";
 export { default as HelixIcon } from "./HelixIcon";
 export { default as HyprlandIcon } from "./HyprlandIcon";

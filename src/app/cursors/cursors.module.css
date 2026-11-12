@@ -1,0 +1,573 @@
+.page {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.header {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.description {
+  margin: 0 auto;
+  max-width: 68ch;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+.mediaCard {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.mediaFrame {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  border-radius: 1rem;
+}
+
+.mediaImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mediaCaption {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.82rem;
+}
+
+.mediaCaption strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.fact {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  min-width: 0;
+}
+
+.factValue {
+  color: var(--foreground);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.factLabel {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.toc {
+  display: grid;
+  gap: 0.45rem;
+  align-self: start;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .toc {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.tocTitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.tocNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .tocNav {
+    display: grid;
+  }
+}
+
+.tocLink {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 96%, var(--card-bg) 4%);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.tocLink:hover,
+.tocLink:focus-visible {
+  outline: none;
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border) 55%);
+  background: color-mix(in srgb, var(--primary) 7%, transparent);
+}
+
+.article {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  min-width: 0;
+  max-width: 60rem;
+}
+
+.section {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+  scroll-margin-top: 2rem;
+}
+
+.sectionHead {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.copy {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 0.98rem;
+  overflow-wrap: anywhere;
+}
+
+.packGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 800px) {
+  .packGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.packCard {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  min-width: 0;
+}
+
+.packImage {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+}
+
+.packTitle {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.packCopy {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.packMeta {
+  margin: 0;
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.note {
+  max-width: 68ch;
+  padding: 0.9rem 1rem;
+  border-left: 2px solid var(--primary);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.subheading {
+  margin: 0.5rem 0 0;
+  color: var(--foreground);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  scroll-margin-top: 2rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  min-width: 0;
+}
+
+.table {
+  width: 100%;
+  min-width: 28rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--background) 88%, var(--card-bg) 12%);
+  font-weight: 700;
+}
+
+.table td {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+  background: color-mix(in srgb, var(--background) 86%, #050505 14%);
+  color: var(--foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  tab-size: 2;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary)
+    color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.codeBlock::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.codeBlock::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.codeBlock::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 78%, transparent);
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--background) 86%, #050505 14%);
+}
+
+.inlineCode {
+  padding: 0.08em 0.32em;
+  border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+  background: color-mix(in srgb, var(--background) 90%, var(--card-bg) 10%);
+  color: var(--foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.86em;
+  overflow-wrap: anywhere;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  min-width: 0;
+}
+
+@media (min-width: 860px) {
+  .contactGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contactCard {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  min-width: 0;
+}
+
+.contactLink {
+  display: block;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 0.6rem;
+  background: #f4f4f5;
+}
+
+.contactImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contactCaption {
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-size: 0.8rem;
+}
+
+.contactCaption strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.details {
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+}
+
+.summary {
+  cursor: pointer;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.summary::marker {
+  color: var(--primary);
+}
+
+.detailsGrid {
+  margin-top: 0.9rem;
+}
+
+.waitRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.waitCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--border) 66%, transparent);
+  background: color-mix(in srgb, var(--background) 94%, var(--card-bg) 6%);
+  min-width: 0;
+}
+
+.waitImage {
+  display: block;
+  width: 62px;
+  height: auto;
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 0.35rem;
+  background: #111113;
+}
+
+.waitCaption {
+  display: grid;
+  gap: 0.1rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.waitCaption strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.numberedList,
+.list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.numberedList li,
+.list li {
+  padding-left: 0.15rem;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.link:hover,
+.link:focus-visible {
+  outline: none;
+  opacity: 0.8;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.78rem 1.8rem;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--background);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  outline: none;
+  opacity: 0.88;
+}
+
+@media (max-width: 767px) {
+  .page {
+    gap: 1.5rem;
+  }
+
+  .description {
+    line-height: 1.7;
+  }
+
+  .article {
+    gap: 2.5rem;
+  }
+
+  .copy {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  .codeBlock {
+    font-size: 0.78rem;
+    padding: 0.8rem 0.85rem;
+  }
+
+  .table {
+    font-size: 0.82rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
